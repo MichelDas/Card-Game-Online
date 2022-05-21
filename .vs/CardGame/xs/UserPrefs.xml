@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{0EEBF18E-272D-828E-0FE3-FE5D1E52DE1C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RuleBook.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="132" Column="42" />
+      <File FileName="Assets/Scripts/Battlers/Battler.cs" Line="14" Column="40" />
+      <File FileName="Assets/Scripts/Battlers/BattlerHand.cs" Line="37" Column="20" />
+      <File FileName="Assets/Scripts/Cards/Card.cs" Line="21" Column="25" />
+      <File FileName="Assets/Scripts/Battlers/SubmitPosition.cs" Line="22" Column="27" />
+      <File FileName="Assets/Scripts/RuleBook.cs" Line="66" Column="41" />
+      <File FileName="Assets/Scripts/GameUI.cs" Line="19" Column="38" />
+      <File FileName="Assets/Scripts/Cards/CardBase.cs" Line="19" Column="16" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b3a103f2-7f87-4d57-a865-66b787c9ec3f" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
