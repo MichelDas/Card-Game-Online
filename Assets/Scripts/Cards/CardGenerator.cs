@@ -10,12 +10,12 @@ public class CardGenerator : MonoBehaviour
     [SerializeField] CardBase[] cardBases;
     [SerializeField] Card cardPrefab;
 
-    public Card Spawn(int number)
+    public Card Spawn(int number, bool isEnemy)
     {
 
         Card card = Instantiate(cardPrefab);
         card.name = cardBases[number].Name + "Card";
-        card.Set(cardBases[number]);
+        card.Set(cardBases[number], isEnemy);
         return card;
     }
 }

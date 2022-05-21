@@ -6,6 +6,8 @@ public class BattlerHand : MonoBehaviour
 {
     List<Card> list = new List<Card>();
 
+    public bool IsEmpty { get => list.Count == 0; }
+
     public void Add(Card card)
     {
         list.Add(card);

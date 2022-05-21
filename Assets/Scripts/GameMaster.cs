@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
     [SerializeField] Battler player;
     [SerializeField] Battler enemy;
     [SerializeField] CardGenerator cardGenerator;
-    [SerializeField] GameObject submitButton;
     [SerializeField] GameUI gameUI;
     RuleBook ruleBook;
 
@@ -27,24 +27,23 @@ public class GameMaster : MonoBehaviour
         player.Life = 4;
         enemy.Life = 4;
         gameUI.ShowLifes(player.Life, enemy.Life);
+        gameUI.UpdateAddNumber(player.AddNumber, enemy.AddNumber);
         player.OnSubmitAction = SubmittedAction;
         enemy.OnSubmitAction = SubmittedAction;
-        SetupCards(player);
-        SetupCards(enemy);
+        SetupCards(battler: player, isEnemy: false);
+        SetupCards(battler: enemy, isEnemy: true);
     }
 
     void SubmittedAction()
     {
         if(player.IsSubmitted && enemy.IsSubmitted)
         {
-            submitButton.SetActive(false);
             //Cardの　勝利判定(しょうりはんてい）（check if win or not)
             StartCoroutine(CardBattle());
         }
         else　if (player.IsSubmitted)
         {
             // if only player submit the card, the button will be closed
-            submitButton.SetActive(false);
             // Enemyからカードを出す
             enemy.RandomSubmit();
         }
@@ -54,11 +53,11 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-    void SetupCards(Battler battler)
+    void SetupCards(Battler battler, bool isEnemy)
     {
         for (int i = 0; i < 8; i++)
         {
-            Card card = cardGenerator.Spawn(i);
+            Card card = cardGenerator.Spawn(i, isEnemy);
             battler.SetCardToHand(card);
         }
         battler.Hand.ResetPosition();
@@ -68,7 +67,9 @@ public class GameMaster : MonoBehaviour
     // ちょっと遅らせてから結果を表示：コルーチン使う
     IEnumerator CardBattle()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.6f);
+        enemy.SubmitCard.Open();
+        yield return new WaitForSeconds(1);
         Result result = ruleBook.GetResult(player, enemy);
         //Debug.Log(result);
         switch (result)
@@ -98,7 +99,8 @@ public class GameMaster : MonoBehaviour
 
         gameUI.ShowLifes(player.Life, enemy.Life);
         yield return new WaitForSeconds(1f);
-        if ((result == Result.GameWin) || (result == Result.GameLose) || (player.Life <= 0 || enemy.Life <= 0))
+        if ((player.Hand.IsEmpty) || (result == Result.GameWin) || (result == Result.GameLose)
+            || (player.Life <= 0 || enemy.Life <= 0))
         {
             ShowResult(result);
         }
@@ -131,6 +133,18 @@ public class GameMaster : MonoBehaviour
         {
             gameUI.ShowGameResult("WIN");
         }
+        else if(player.Life > enemy.Life)
+        {
+            gameUI.ShowGameResult("WIN");
+        }
+        else if (player.Life < enemy.Life)
+        {
+            gameUI.ShowGameResult("LOSE");
+        }
+        else
+        {
+            gameUI.ShowGameResult("DRAW");
+        }
     }
 
     // 表示を終わったら、次のターンにうつる（場のカードを捨てる） 
@@ -138,13 +152,14 @@ public class GameMaster : MonoBehaviour
     {
         player.SetupNextTurn();
         enemy.SetupNextTurn();
-        submitButton.SetActive(true);
         gameUI.SetupNextTurn();
+        gameUI.UpdateAddNumber(player.AddNumber, enemy.AddNumber);
 
-        if(enemy.IsFirstSubmit)
+        if (enemy.IsFirstSubmit)
         {
             enemy.IsFirstSubmit = false;
             enemy.RandomSubmit();
+            enemy.SubmitCard.Open();
         }
 
         if(player.IsFirstSubmit)
@@ -153,6 +168,17 @@ public class GameMaster : MonoBehaviour
             // this will be usefull in online
         }
 
+    }
+
+    public void OnRetryButton()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
+    }
+
+    public void OnTitleButton()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 }

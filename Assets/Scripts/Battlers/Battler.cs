@@ -7,6 +7,7 @@ public class Battler : MonoBehaviour
 {
     [SerializeField] BattlerHand hand;
     [SerializeField] SubmitPosition submitPosition;
+    [SerializeField] GameObject submitButton;
 
     public bool IsSubmitted { get; private set; }
     public bool IsFirstSubmit { get; set; }
@@ -41,6 +42,7 @@ public class Battler : MonoBehaviour
         hand.Remove(card);
         submitPosition.Set(card);
         hand.ResetPosition();
+        submitButton?.SetActive(true);
     }
 
     public void OnSubmitButton()
@@ -50,6 +52,7 @@ public class Battler : MonoBehaviour
             IsSubmitted = true;
             // Tell GameMaster・GameMasterに通知
             OnSubmitAction?.Invoke();
+            submitButton?.SetActive(false);
         }
     }
 
@@ -72,6 +75,7 @@ public class Battler : MonoBehaviour
         submitPosition.DeleteCard();
         if (IsAddNumberMode)
         {
+            IsAddNumberMode = false;
             AddNumber = 2;
         }
         else

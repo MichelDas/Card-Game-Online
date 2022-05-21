@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SubmitPosition : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class SubmitPosition : MonoBehaviour
     {
         submitCard = card;
         card.transform.SetParent(transform);
-        card.transform.position = transform.position;
+        card.transform.DOMove(transform.position, 0.1f);
+        //card.transform.position = transform.position;
     }
 
     public void DeleteCard()
