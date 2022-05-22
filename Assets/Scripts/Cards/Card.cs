@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class Card : MonoBehaviour
 {
@@ -48,6 +49,15 @@ public class Card : MonoBehaviour
 
     public void Open()
     {
+        if(hidePanel.activeSelf)
+            StartCoroutine(OpenAnim());
+    }
+
+    IEnumerator OpenAnim()
+    {
+        yield return  transform.DORotate(new Vector3(0, 90, 0), 0.2f).WaitForCompletion();
         hidePanel.SetActive(false);
+        yield return transform.DORotate(new Vector3(0, 0, 0), 0.2f).WaitForCompletion();
+
     }
 }

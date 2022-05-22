@@ -1,17 +1,15 @@
 ﻿<Properties StartupConfiguration="{0EEBF18E-272D-828E-0FE3-FE5D1E52DE1C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SubmitButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/LoadingAnimPlayer.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="166" Column="37" />
-      <File FileName="Assets/Scripts/Battlers/Battler.cs" Line="8" Column="30" />
-      <File FileName="Assets/Scripts/Battlers/BattlerHand.cs" Line="9" Column="50" />
-      <File FileName="Assets/Scripts/Cards/Card.cs" Line="45" Column="69" />
-      <File FileName="Assets/Scripts/Battlers/SubmitPosition.cs" Line="17" Column="57" />
-      <File FileName="Assets/Scripts/RuleBook.cs" Line="74" Column="110" />
-      <File FileName="Assets/Scripts/GameUI.cs" Line="24" Column="32" />
-      <File FileName="Assets/Scripts/Cards/CardBase.cs" Line="19" Column="16" />
-      <File FileName="Assets/Scripts/Menu/MainMenu.cs" Line="11" Column="40" />
-      <File FileName="Assets/Scripts/Cards/CardGenerator.cs" Line="13" Column="19" />
-      <File FileName="Assets/Scripts/SubmitButton.cs" Line="4" Column="7" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="268" Column="1" />
+      <File FileName="Assets/Scripts/Menu/MainMenu.cs" Line="27" Column="56" />
+      <File FileName="Assets/Scripts/Onlines/OnlineMenuManager.cs" Line="44" Column="74" />
+      <File FileName="Assets/Scripts/Managers/DataManager.cs" Line="13" Column="29" />
+      <File FileName="Assets/Scripts/Battlers/Battler.cs" Line="75" Column="51" />
+      <File FileName="Assets/Scripts/Battlers/BattlerHand.cs" Line="42" Column="35" />
+      <File FileName="Assets/Scripts/UI/GameUI.cs" Line="24" Column="35" />
+      <File FileName="Assets/Scripts/Cards/CardGenerator.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/UI/LoadingAnimPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

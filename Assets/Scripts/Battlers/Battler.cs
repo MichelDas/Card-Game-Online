@@ -69,6 +69,19 @@ public class Battler : MonoBehaviour
 
     }
 
+    public void SetSubmitCard(int number)
+    {
+        // 手札（てふだ）からカードをランダムを抜き取る（ぬきとる）
+        Card card = hand.RemoveCardOfNumber(number);
+        // 提出ようにセット
+        submitPosition.Set(card);
+        // 提出（ていしゅつ）GameMasterに通知（つうち）する
+        IsSubmitted = true;
+        OnSubmitAction?.Invoke();
+        hand.ResetPosition();
+
+    }
+
     public void SetupNextTurn()
     {
         IsSubmitted = false;

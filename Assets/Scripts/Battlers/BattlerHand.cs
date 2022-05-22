@@ -39,4 +39,11 @@ public class BattlerHand : MonoBehaviour
         return card;
     }
 
+    public Card RemoveCardOfNumber(int number)
+    {
+        Card card = list.Find(x => x.Base.Number == number);
+        Remove(card);
+        return card;
+    } 
+
 }
