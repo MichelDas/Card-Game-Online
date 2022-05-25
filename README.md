@@ -6,3 +6,5 @@ External Resources:
 Photon Full Tutorial: https://zenn.dev/o8que/books/bdcb9af27bdd7d
 
 Loading Animations: https://game-ui.net/?p=51#toc2
+
+Level Fading: https://github.com/naichilab/Unity-FadeManager
