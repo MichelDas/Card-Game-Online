@@ -1,5 +1,5 @@
 # Card-Game-Online
-[![Card Game](https://ibb.co/Fm6DyzV)](https://youtu.be/EkYyhLMAYMg")
+[![Card Game](https://i.ibb.co/NtxyJKS/2.png)](https://youtu.be/EkYyhLMAYMg")
 
 This is the Online Card Game project That I did to learn Photon Unity Networking.
 
