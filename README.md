@@ -3,24 +3,16 @@
 
 This is the Online Card Game project That I did to learn Photon Unity Networking.
 
-External Resources:
-Photon Full Tutorial: https://zenn.dev/o8que/books/bdcb9af27bdd7d
-
-Loading Animations: https://game-ui.net/?p=51#toc2
-
-Level Fading: https://github.com/naichilab/Unity-FadeManager
-
-## Sample Video
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## プロジェクトについて （About The Project）
-こちら、ポケモンイエローやポケモンファイアレッドのようなポケモンゲームのクローンである練習プロジェクトです。
+これは、Photon　Networkingの練習のためUnityでつくった オンライン カード ゲーム プロジェクトになっています。
 
 <!-- ABOUT THE PROJECT -->
 ## 参照 (Reference)
-参照はこのYouTube[チャネル](https://www.youtube.com/watch?v=cnvGFyz42lw&list=PLEkX-p0oUs8z38KTG2ZkCykWJEuLLYzpB&index=8)になってます。
+参照はこのYouTube[チャネル](https://zenn.dev/o8que/books/bdcb9af27bdd7d)になってます。
+ローディングアニメション：https://game-ui.net/?p=51#toc2
+レベルフェードイン：https://github.com/naichilab/Unity-FadeManager
 
 ### 入門 (Getting Started)
 
