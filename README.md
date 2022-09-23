@@ -1,12 +1,10 @@
 # Card-Game-Online
 [![Card Game](https://i.ibb.co/NtxyJKS/2.png)](https://youtu.be/EkYyhLMAYMg")
 
-This is the Online Card Game project That I did to learn Photon Unity Networking.
-
-
 <!-- ABOUT THE PROJECT -->
 ## プロジェクトについて （About The Project）
 これは、Photon　Networkingの練習のためUnityでつくった オンライン カード ゲーム プロジェクトになっています。
+This is the Online Card Game project That I did to learn Photon Unity Networking.
 
 <!-- ABOUT THE PROJECT -->
 ## 参照 (Reference)
