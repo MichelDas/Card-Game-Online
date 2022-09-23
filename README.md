@@ -11,9 +11,12 @@ This is the Online Card Game project That I did to learn Photon Unity Networking
 <!-- ABOUT THE PROJECT -->
 ## 参照 (Reference)
 参照はこのYouTube[チャネル](https://zenn.dev/o8que/books/bdcb9af27bdd7d)になってます。
+
 ローディングアニメション：https://game-ui.net/?p=51#toc2
+
 レベルフェードイン：https://github.com/naichilab/Unity-FadeManager
 
+<!--
 ### 入門 (Getting Started)
 
 To Run This project, Clone this project to your local repository 
@@ -37,4 +40,4 @@ and play Level.scene.
  * Pokemon can learn new moves
  * different kind of learnable moves ( normal moves, Stat change such as improve attack )
  * Change pokemon when battling or when a pokemon is fainted
-
+-->
