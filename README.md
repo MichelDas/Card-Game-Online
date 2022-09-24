@@ -1,5 +1,5 @@
 # Card-Game-Online
-[![Card Game](https://i.ibb.co/NtxyJKS/2.png)](https://youtu.be/EkYyhLMAYMg")
+[![Card Game](https://i.ibb.co/Rp7C7Ww/2-PNG.png)](https://youtu.be/EkYyhLMAYMg")
 
 <!-- ABOUT THE PROJECT -->
 ## プロジェクトについて （About The Project）
